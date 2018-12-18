@@ -152,7 +152,7 @@ $osDiskName = 'myOsDisk'
 $osDisk = New-AzureRmDisk -DiskName $osDiskName -Disk `
     (New-AzureRmDiskConfig -AccountType Standard_LRS  `
 	-Location $location -CreateOption Import `
-    -SourceUri $sourceUri) `
+    -SourceUri $sourceUri -OsType Windows) `
     -ResourceGroupName $destinationResourceGroup
 ```
 
